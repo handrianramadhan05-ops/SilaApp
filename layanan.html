@@ -17,13 +17,24 @@
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
+            <input type="checkbox" id="navToggle" class="nav-Toggle">
+            <label for="navToggle" class="navToggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+    
+    
             <nav>
-                <a href="index.html" class="active">Beranda</a>
-                <a href="layanan.html">Ajukan Layanan</a>
-                <a href="riwayat.html">Riwayat</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="layanan.html">Ajukan Layanan</a></li>
+                    <li><a href="riwayat.html">Riwayat</a></li>
+            </nav>
             </nav>
         </div>
     </header>
+
 
     <main>
         <section class="section">
@@ -31,7 +42,65 @@
                 <h1>Ajukan Layanan Akademik</h1>
                 <p class="section-desc"><em>🚧 Coming Soon — Form pengajuan akan tersedia pada tahap berikutnya.</em>
                 </p>
-                <a href="index.html" class="btn btn-outline">← Kembali ke Beranda</a>
+
+                <form action="#" method="post" class="form-card" target="_self">
+                    <fieldset>
+                        <legend>Data Pengajuan</legend>
+                        <!-- form controls di dalam sini -->
+                        <!-- nama -->
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap....." required>
+                        </div>
+
+                        <!-- nim -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nim">NIM</label>
+                                <input type="text" id="nim" name="nim" placeholder="Contoh: 12345678" maxlength="8"
+                                    required>
+                            </div>
+
+                            <!-- program studi -->
+                            <div class="form-group">
+                                <label for="prodi">Program Studi</label>
+                                <select id="prodi" name="prodi" required>
+                                    <option value="">— Pilih Program Studi —</option>
+                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Manajemen">Manajemen</option>
+                                    <option value="Akuntansi">Akuntansi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- layanan dan tanggal -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="layanan">Jenis Layanan</label>
+                                <select id="layanan" name="layanan" required>
+                                    <option value="">— Pilih Layanan —</option>
+                                    <option value="SKA">SKA — Surat Aktif Kuliah</option>
+                                    <option value="CAK">CAK — Cuti Akademik</option>
+                                    <option value="TNM">TNM — Transkrip Nilai</option>
+                                    <option value="PDA">PDA — Perubahan Data</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal Pengajuan</label>
+                                <input type="date" id="tanggal" name="tanggal" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="keterangan">Keterangan (opsional)</label>
+                            <textarea id="keterangan" name="keterangan" rows="3"
+                                placeholder="Jelaskan alasan pengajuan Anda..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
+                            <button type="reset" class="btn btn-outline">🔄️ Reset</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </section>
     </main>
@@ -42,11 +111,13 @@
                 <strong>🎓 SILA</strong>
                 <p>Platform digital untuk pengajuan layanan akademik mahasiswa.</p>
             </div>
-            <div>
+            <div class="footer-nav">
                 <h4>Navigasi</h4>
-                <a href="index.html">Beranda</a>
-                <a href="layanan.html">Ajukan Layanan</a>
-                <a href="riwayat.html">Riwayat</a>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="layanan.html">Ajukan Layanan</a></li>
+                    <li><a href="riwayat.html">Riwayat</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
@@ -55,7 +126,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
