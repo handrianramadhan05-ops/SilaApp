@@ -23,12 +23,12 @@
                 <span></span>
                 <span></span>
             </label>
-    
-    
+
+
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="layanan.html">Ajukan Layanan</a></li>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="layanan.html" class="active">Ajukan Layanan</a></li>
                     <li><a href="riwayat.html">Riwayat</a></li>
             </nav>
             </nav>
@@ -43,28 +43,27 @@
                 <p class="section-desc"><em>Form pengajuan akan tersedia pada tahap berikutnya.</em>
                 </p>
 
-                <form action="#" method="post" class="form-card" target="_self">
+                <form action="#" method="post" class="form-card" onsubmit="return validasiForm()">">
                     <fieldset>
                         <legend>Data Pengajuan</legend>
                         <!-- form controls di dalam sini -->
                         <!-- nama -->
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
-                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap....." required>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap.....">
                         </div>
 
                         <!-- nim -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nim">NIM</label>
-                                <input type="text" id="nim" name="nim" placeholder="Contoh: 12345678" maxlength="8"
-                                    required>
+                                <input type="text" id="nim" name="nim" placeholder="Contoh: 12345678" maxlength="8">
                             </div>
 
                             <!-- program studi -->
                             <div class="form-group">
                                 <label for="prodi">Program Studi</label>
-                                <select id="prodi" name="prodi" required>
+                                <select id="prodi" name="prodi">
                                     <option value="">— Pilih Program Studi —</option>
                                     <option value="Sistem Informasi">Sistem Informasi</option>
                                     <option value="Teknik Informatika">Teknik Informatika</option>
@@ -77,7 +76,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="layanan">Jenis Layanan</label>
-                                <select id="layanan" name="layanan" required>
+                                <select id="layanan" name="layanan">
                                     <option value="">— Pilih Layanan —</option>
                                     <option value="SKA">SKA — Surat Aktif Kuliah</option>
                                     <option value="CAK">CAK — Cuti Akademik</option>
@@ -87,7 +86,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="tanggal">Tanggal Pengajuan</label>
-                                <input type="date" id="tanggal" name="tanggal" required>
+                                <input type="date" id="tanggal" name="tanggal">
                             </div>
                         </div>
                         <div class="form-group">
@@ -96,7 +95,8 @@
                                 placeholder="Jelaskan alasan pengajuan Anda..."></textarea>
                         </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
+                            <input type="submit" name="submit" value="🚀 Ajukan Sekarang"
+                                class="btn btn-primary"></input>
                             <button type="reset" class="btn btn-outline">🔄️ Reset</button>
                         </div>
                     </fieldset>
@@ -126,6 +126,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
